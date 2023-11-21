@@ -1,7 +1,7 @@
-package AIVIA
+package main
 
 import "fmt"
 
 func main() {
-	fmt.Println("Start1")
+	fmt.Println("Start")
 }
