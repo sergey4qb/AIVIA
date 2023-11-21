@@ -48,7 +48,7 @@ func (client *Client) GetExchangeInfo() (dto.ExchangeInfo, error) {
 
 func (client *Client) GetTickerPrice(symbol string) (dto.Price, error) {
 	var tickerPrice dto.Price
-	url := fmt.Sprintf("%s/fapi/v2/ticker/price?symbol=%s", client.futuresBaseURL, strings.ToLower(symbol))
+	url := fmt.Sprintf("%s/fapi/v1/ticker/price?symbol=%s", client.futuresBaseURL, strings.ToLower(symbol))
 	res, err := client.client.HTTPClient.Get(url)
 	if err != nil {
 		return dto.Price{}, err
